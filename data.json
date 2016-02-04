@@ -1,0 +1,21 @@
+{
+    "getRewardsBalanceResponse": {
+        "status": "success",
+        "request_id": "9AP6ARXXURGGBAU_1454540816802",
+        "client_id": "NEWEGG",
+        "timestamp": "2015-12-08T11:19:56.713-07:00",
+        "conversion_rate": "0.0070",
+        "reservation_amount": {
+            "rewards_amount": "1",
+            "rewards_unit": "Points",
+            "currency_amount": "0.01",
+            "currency_code": "USD"
+        },
+        "balance": {
+            "rewards_amount": "3565872",
+            "rewards_unit": "Points",
+            "currency_amount": "24961.11",
+            "currency_code": "USD"
+        }
+    }
+}
