@@ -3,7 +3,7 @@
 var fs = require('fs');
 var thunkify = require('thunkify');
 var readFile = thunkify(fs.readFile);
-
+var co = require('co');
 
 // readFile('classtest.js', 'utf-8')(function(err, data){
 //     console.log(data);
@@ -15,6 +15,8 @@ var gen = function* () {
     let r2 = yield readFile('data.json', 'utf-8');
     console.log("file2:\n", r2);
 };
+
+co(gen);
 
 // var g = gen();
 // var r1 = g.next();
