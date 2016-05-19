@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+        $(() => {
+            var $loading = $('.ajax-loading').hide();
+            $(document)
+                .ajaxStart(function() {
+                    $loading.show();
+                })
+                .ajaxStop(function() {
+                    $loading.hide();
+                });
+
+            $(".btn1").click(() => {
+                DoAjaxPromise().then(data => {
+                    console.log(data);
+                }, error => {
+                    console.log(error);
+                });
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <input type="button" class="btn1" value="click">
+    <div class="ajax-loading">
+        <div>abc</div>
+    </div>
+</body>
+
+</html>
