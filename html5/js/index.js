@@ -24,6 +24,7 @@ class AjaxPromiser {
     };
 }
 
+
 class Sleeper {
     constructor(name, ms) {
         this.name = name;

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.js"></script>
+    <script language="JavaScript">
+        
+        // require.config({
+        //     baseUrl: "https://images10.nutrend.com/ssl/",
+        //     paths: {
+        //         "bootstrap": "javascripts/bootstrapv78.0.0.0.141012.min",
+        //         "common": "javascripts/commonv146.0.0.0.150915.min",
+        //         "css3-mediaqueries": "javascripts/css3-mediaqueriesv78.0.0.0.141012.min",
+        //         "garage": "javascripts/garagev146.0.0.0.150915.min",
+        //         "hogan": "javascripts/hoganv78.0.0.0.141012.min",
+        //         "jquery-plugins": "javascripts/jquery-pluginsv146.0.0.0.150915.min",
+        //         "jquery-validate": "javascripts/jquery-validatev53.0.0.0.min",
+        //         "jquery": "javascripts/jqueryv78.0.0.0.141012.min",
+        //         "PIE": "javascripts/PIEv146.0.0.0.150915.min",
+        //         "require": "javascripts/require.min",
+        //         "validator": "javascripts/validatorv146.0.0.0.150915.min",
+        //         "views/cart/index": "javascripts/views/cart/indexv146.0.0.0.150915.min",
+        //         "views/checkout/billing": "javascripts/views/checkout/billingv146.0.0.0.150915.min",
+        //         "views/checkout/review": "javascripts/views/checkout/reviewv146.0.0.0.150915.min",
+        //         "views/checkout/shipping": "javascripts/views/checkout/shippingv146.0.0.0.150915.min",
+        //         "views/checkout/thankyou": "javascripts/views/checkout/thankyouv146.0.0.0.150915.min",
+        //         "views/checkout/_partials": "javascripts/views/checkout/_partialsv146.0.0.0.150915.min",
+        //         "views/error/404": "javascripts/views/error/404v146.0.0.0.150915.min",
+        //         "views/error/500": "javascripts/views/error/500v146.0.0.0.150915.min",
+        //         "views/login/index": "javascripts/views/login/indexv146.0.0.0.150915.min",
+        //         "views/myaccount/address_book": "javascripts/views/myaccount/address_bookv146.0.0.0.150915.min",
+        //         "views/myaccount/garage": "javascripts/views/myaccount/garagev146.0.0.0.150915.min",
+        //         "views/myaccount/index": "javascripts/views/myaccount/indexv146.0.0.0.150915.min",
+        //         "views/myaccount/orderDetail": "javascripts/views/myaccount/orderDetailv146.0.0.0.150915.min",
+        //         "views/myaccount/orders": "javascripts/views/myaccount/ordersv146.0.0.0.150915.min",
+        //         "views/myaccount/payment_method": "javascripts/views/myaccount/payment_methodv146.0.0.0.150915.min",
+        //         "views/myaccount/subscribeEBlast": "javascripts/views/myaccount/subscribeEBlastv146.0.0.0.150915.min",
+        //         "views/myaccount/unsubscriptions": "javascripts/views/myaccount/unsubscriptionsv146.0.0.0.150915.min",
+        //         "views/myaccount/wish_list": "javascripts/views/myaccount/wish_listv146.0.0.0.150915.min",
+        //         "views/myaccount/_partials": "javascripts/views/myaccount/_partialsv146.0.0.0.150915.min",
+        //         "views/shared/_partials": "javascripts/views/shared/_partialsv146.0.0.0.150915.min",
+        //         "views/sweepstakes/Halloween/script/jquery": "javascripts/views/sweepstakes/Halloween/script/jqueryv146.0.0.0.150915.min",
+        //         "views/sweepstakes/Halloween/script/sweepstakes": "javascripts/views/sweepstakes/Halloween/script/sweepstakesv146.0.0.0.150915.min",
+        //         "views/sweepstakes/result": "javascripts/views/sweepstakes/resultv146.0.0.0.150915.min",
+        //     },
+        //     shim: {
+        //         "jquery-plugins": {
+        //             deps: ["jquery"],
+        //             exports: "jquery-plugins"
+        //         },
+        //         "bootstrap": {
+        //             deps: ["jquery"],
+        //             exports: "bootstrap"
+        //         }
+        //     }
+        // });
+        // var nutrend = {
+        //     _deps: {
+        //         "_keys": ["jquery", "bootstrap", "jquery-plugins", "hogan", "common"],
+        //         "jquery": null,
+        //         "bootstrap": null,
+        //         "jquery-plugins": null,
+        //         "hogan": null,
+        //         "common": null
+        //     },
+        //     _modules: {},
+        //     settings: {
+        //         wwwHost: "http://www.nutrend.com",
+        //         sslHost: "https://secure.nutrend.com",
+        //         resource_host: "https://images10.nutrend.com/ssl/",
+        //         env: "production",
+        //         google_analytics_uid: "UA-55300806-1",
+        //         google_analytics_uid_newegg: "UA-1147542-9"
+        //     },
+        //     page: function(deps, page) {
+        //         var thisPage, thisDeps;
+        //         if (deps.constructor === Array) {
+        //             thisDeps = deps;
+        //             thisPage = page;
+        //         } else {
+        //             thisPage = deps;
+        //         }
+
+        //         window.Page = thisPage;
+        //         if (thisDeps) {
+        //             for (var index = 0; index < thisDeps.length; index++) {
+        //                 var depName = thisDeps[index];
+        //                 this.addDep(depName);
+        //             }
+        //         }
+
+        //         var depIndex = this._deps._keys.length;
+        //         var moduleHandler = function() {
+        //             if (depIndex !== nutrend._deps._keys.length) {
+        //                 depIndex = nutrend._deps._keys.length
+        //                 require(nutrend._deps._keys, moduleHandler);
+        //             } else {
+        //                 for (var index = 0; index < nutrend._deps._keys.length; index++) {
+        //                     var key = nutrend._deps._keys[index];
+        //                     var result = require(key);
+        //                     nutrend._deps[key] = result ? result : null;
+        //                 }
+
+        //                 for (var key in nutrend._modules) {
+        //                     var module = nutrend._modules[key];
+        //                     module.prototype.__deps = nutrend._deps;
+        //                     module.prototype.__templates = nutrend._templates;
+        //                 }
+
+        //                 Page.__deps = nutrend._deps;
+        //                 Page.__templates = nutrend._templates;
+
+        //                 $(function() {
+        //                     if (nutrend._modules.hasOwnProperty("Layout")) {
+        //                         Page.controls.layout = new Layout(this, $("body")).load();
+        //                     }
+        //                     Page.load();
+        //                 });
+        //             }
+        //         };
+
+        //         require(this._deps._keys, moduleHandler);
+        //     },
+        //     module: function(moduleName, deps, module) {
+        //         var thisModule, thisDeps;
+
+        //         if (deps.constructor !== Array) {
+        //             thisModule = deps;
+        //         } else {
+        //             thisModule = module;
+        //             thisDeps = deps;
+        //         }
+
+        //         if (!this._modules.hasOwnProperty(moduleName)) {
+        //             this._modules[moduleName] = thisModule;
+        //             window[moduleName] = thisModule;
+        //             if (thisDeps) {
+        //                 for (var index = 0; index < thisDeps.length; index++) {
+        //                     this.addDep(thisDeps[index]);
+        //                 }
+        //             }
+        //         }
+
+        //     },
+        //     addDep: function(depName) {
+        //         if (!this._deps.hasOwnProperty(depName)) {
+        //             this._deps[depName] = null;
+        //             this._deps._keys.push(depName);
+        //         }
+        //     }
+        // };
+    </script>
+
+</head>
+
+<body>
+    <input type="button" id="b" value="click">
+</body>
+
+</html>
