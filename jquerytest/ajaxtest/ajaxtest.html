@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <style>
+
+    </style>
+    <script type="text/javascript">
+        ! function($) {
+            $(function() {
+                $("#ajaxbtn").click(() => {
+                    $.ajax({
+                        url: "abc.json",
+                        cache: !1,
+                        success: (data) => {
+                            $("#ajaxlbl").text(JSON.stringify(data));
+                        }
+                    })
+                });
+
+                $("input[name='getbtn']").click(() => {
+                    $.get("abc.json", 'test', (data) => {
+                        $("#getlbl").text(JSON.stringify(data));
+                    })
+                });
+
+                $("input[name='getjsonbtn']").click(() => {
+                    $.getJSON("abc.json", (data) => {
+                        $("#getjsonlbl").text(JSON.stringify(data));
+                    })
+                });
+
+                $("input[name='getjsonpbtn']").click(() => {
+                    $.ajax({
+                        url: "https://api.github.com/users/kidok",
+                        dataType: "jsonp",
+                        jsonpCallback: "logResult"
+                    });
+                });
+            })
+        }(jQuery)
+    </script>
+    <script>
+        function logResult(data) {
+            $("#getjsonplbl").text(JSON.stringify(data));
+            console.log(data);
+        };
+    </script>
+</head>
+
+<body>
+    <input type="button" name="ajaxbtn" value="ajaxbtn" id="ajaxbtn"><label id="ajaxlbl"></label>
+    <input type="button" name="getbtn" value="getbtn" id="getbtn"><label id="getlbl"></label>
+    <input type="button" name="getjsonbtn" value="getjsonbtn" id="getjsonbtn"><label id="getjsonlbl"></label>
+    <input type="button" name="getjsonpbtn" value="getjsonpbtn" id="getjsonpbtn"><label id="getjsonplbl"></label>
+</body>
+
+</html>

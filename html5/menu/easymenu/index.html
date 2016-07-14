@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link href="css/style1.css" rel="stylesheet">
+    <style>
+        #navigation li {
+            float: left;
+            display: block;
+            margin: 0;
+        }
+        
+        .clearfix:after,
+        .clearfix:before {
+            content: '';
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">abc</div>
+    <nav id="navigation" class="clearfix">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="row">abc</div>
+</body>
+
+</html>
