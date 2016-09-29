@@ -12,4 +12,4 @@
         Web.StateManager.Cookies.clear("NV_OTHERINFO");
         window.location.href = "https://secure.newegg.com/NewMyAccount/AccountLogin.aspx?tojump=0&nextpage=https%3a%2f%2fsecure.newegg.com%2fNewMyAccount%2fOrderHistory.aspx";
     };
-</script>
+</script>https://docs.google.com/spreadsheets/d/1GeqLJ1BzxxazA4BAHsinmKQpnCppW7ts2VSZH7Fvmeg/edit?usp=sharing
